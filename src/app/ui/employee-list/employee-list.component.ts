@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { EmployeeModel } from '../../model/employee.model';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
   selector: 'employee-list',
@@ -11,8 +11,8 @@ import { EmployeeModel } from '../../model/employee.model';
 })
 export class EmployeeListComponent {
   title: string = 'jak polaczyc ts z html';
-  data$: Observable<EmployeeModel[] | null> = this._httpClient.get<EmployeeModel[]>( 'assets/data/employees.json');
-  data = [{name:'jacek'}, {name:'pawel'}];
-  constructor(private _httpClient: HttpClient) {
+  data$: Observable<EmployeeModel[] | null> = this._employeeService.getAll();
+  data = [{ name: 'jacek' }, { name: 'pawel' }];
+  constructor(private _employeeService: EmployeeService) {
   }
 }

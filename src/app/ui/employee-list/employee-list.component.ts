@@ -12,7 +12,6 @@ import {EmployeeService} from "../../services/employee.service";
 export class EmployeeListComponent {
   title: string = 'jak polaczyc ts z html';
   data$: Observable<EmployeeModel[] | null> = this._employeeService.getAll();
-  data = [{ name: 'jacek' }, { name: 'pawel' }];
   constructor(private _employeeService: EmployeeService) {
   }
 }

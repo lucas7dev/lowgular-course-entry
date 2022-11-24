@@ -12,6 +12,7 @@ export class EmployeeFormComponent {
     name: new FormControl(null,[Validators.required]),
     age: new FormControl(null,[Validators.min(0)]),
     salary: new FormControl(null,[Validators.min(0), Validators.required])
+
   });
 
 

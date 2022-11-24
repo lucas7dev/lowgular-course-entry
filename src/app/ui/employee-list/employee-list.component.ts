@@ -10,7 +10,6 @@ import {PersonModel} from "../../model/person.model";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeListComponent {
-  title: string = 'jak polaczyc ts z html';
   data$: Observable<PersonModel[] | null> = this._employeeService.getAll();
   constructor(private _employeeService: EmployeeService) {
   }

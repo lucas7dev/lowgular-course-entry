@@ -1,0 +1,7 @@
+<h1>Project list</h1>
+
+
+<ul *ngIf="project$ | async as item;">
+  <li *ngFor="let project of item">{{ project.id}}: {{ project.name}}:
+    {{project.owner }}</li>
+</ul>

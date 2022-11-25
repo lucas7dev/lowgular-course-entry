@@ -15,7 +15,7 @@ export class EmployeeFormComponent {
 
   });
 
-onButtonClicked(){
-  alert('“User was successfully added to thedatabase');
-}
+ onButtonClicked(form: {email: string, age: number, salary: number}) {
+   alert(`User was successfully added to the database. Email: ${form.email}, age: ${form.age}, salary: ${form.salary}`);
+ }
 }

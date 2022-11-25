@@ -1,0 +1,50 @@
+<h1 style="color: burlywood">Employee List -Table</h1>
+
+<ng-container *ngIf="employees$ | async as data; else empty">
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let employee of data">
+      <tr>
+        <td style="color: blue"><b>{{employee.id}}</b></td>
+        <td>{{employee.employee_name}}</td>
+        <td style="margin: 15px">{{employee.employee_age}}</td>
+        <td>{{employee.employee_salary}}</td>
+        <button (click)="remove(employee.id)" style="margin-left: 40px; color: darkorange">DELETE</button>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-template #empty>
+  <p>NO DATA</p>
+</ng-template>
+
+
+<br>
+
+<form [formGroup]="employeeAddForm" (ngSubmit)="onEmployeeAddFormSubmitted(employeeAddForm.value)">
+  <input type="text" formControlName="employee_name" placeholder="Employee Name">
+  <input type="text" formControlName="employee_salary" placeholder="Employee Salary">
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+

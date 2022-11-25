@@ -12490,3 +12490,6199 @@
 	"level": "info",
 	"message": "[API] Response ok: data-structure/create"
 }
+[info] [API] Request for flow/create-entity: {
+	"action": "flow/create-entity",
+	"params": {},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "sbpatfoI3H",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/model",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for flow/create-entity"
+}
+[info] [CLI] Calling Query flow/create-entity: {
+	"funcParams": {},
+	"level": "info",
+	"message": "[CLI] Calling Query flow/create-entity"
+}
+[info] [CLI] Called Query flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app",
+				"absoluteRootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"rootRoutingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query flow/create-entity"
+}
+[info] [API] Response ok: flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app",
+				"absoluteRootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"rootRoutingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: flow/create-entity"
+}
+[info] [API] Request for data-structure/create: {
+	"action": "data-structure/create",
+	"params": {
+		"name": "employee",
+		"properties": {
+			"id": "string"
+		},
+		"entityId": "model"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "sbpatfoI3H",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/model",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for data-structure/create"
+}
+[info] [CLI] Calling Command data-structure/create: {
+	"funcParams": {
+		"name": "employee",
+		"properties": {
+			"id": "string"
+		},
+		"entityId": "model"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command data-structure/create"
+}
+[info] [CommandBus]: Dispatching command CREATE_DATA_STRUCTURE: {
+	"commandName": "CREATE_DATA_STRUCTURE",
+	"payload": {
+		"folderPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/model",
+		"name": "employee",
+		"suffix": "Model",
+		"properties": {
+			"id": "string"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command CREATE_DATA_STRUCTURE"
+}
+[info] [CommandBus]: Handled  CREATE_DATA_STRUCTURE: {
+	"commandName": "CREATE_DATA_STRUCTURE",
+	"payload": {
+		"folderPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/model",
+		"name": "employee",
+		"suffix": "Model",
+		"properties": {
+			"id": "string"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  CREATE_DATA_STRUCTURE"
+}
+[info] [CLI] Called Command data-structure/create: {
+	"message": "[CLI] Called Command data-structure/create",
+	"level": "info"
+}
+[info] [API] Response ok: data-structure/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/model/employee.model.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: data-structure/create"
+}
+[info] [API] Request for flow/create-entity: {
+	"action": "flow/create-entity",
+	"params": {},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "cEEVVucKbo",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for flow/create-entity"
+}
+[info] [CLI] Calling Query flow/create-entity: {
+	"funcParams": {},
+	"level": "info",
+	"message": "[CLI] Calling Query flow/create-entity"
+}
+[info] [CLI] Called Query flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app",
+				"absoluteRootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"rootRoutingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query flow/create-entity"
+}
+[info] [API] Response ok: flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app",
+				"absoluteRootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"rootRoutingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: flow/create-entity"
+}
+[info] [API] Request for angular-service/create: {
+	"action": "angular-service/create",
+	"params": {
+		"name": "employee",
+		"entityId": "dataService"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "cEEVVucKbo",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-service/create"
+}
+[info] [CLI] Calling Command angular-service/create: {
+	"funcParams": {
+		"name": "employee",
+		"entityId": "dataService"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-service/create"
+}
+[info] [CommandBus]: Dispatching command CREATE_SERVICE: {
+	"commandName": "CREATE_SERVICE",
+	"payload": {
+		"folderPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services",
+		"name": "employee",
+		"suffix": "Service"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command CREATE_SERVICE"
+}
+[info] [EventBus]: Broadcasting event SERVICE_CREATED: {
+	"type": "SERVICE_CREATED",
+	"payload": {
+		"createdFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event SERVICE_CREATED"
+}
+[info] [CommandBus]: Dispatching command MODULE_CREATE_SERVICE_MODULE: {
+	"commandName": "MODULE_CREATE_SERVICE_MODULE",
+	"payload": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command MODULE_CREATE_SERVICE_MODULE"
+}
+[info] [EventBus]: Broadcasted SERVICE_CREATED: {
+	"event": {
+		"createdFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted SERVICE_CREATED"
+}
+[info] [EventBus]: Broadcasting event MODULE_MODULE_CREATED: {
+	"type": "MODULE_MODULE_CREATED",
+	"payload": {
+		"moduleFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service-module.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event MODULE_MODULE_CREATED"
+}
+[info] [EventBus]: Broadcasted MODULE_MODULE_CREATED: {
+	"event": {
+		"moduleFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service-module.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted MODULE_MODULE_CREATED"
+}
+[info] [CommandBus]: Handled  MODULE_CREATE_SERVICE_MODULE: {
+	"commandName": "MODULE_CREATE_SERVICE_MODULE",
+	"payload": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  MODULE_CREATE_SERVICE_MODULE"
+}
+[info] [CommandBus]: Handled  CREATE_SERVICE: {
+	"commandName": "CREATE_SERVICE",
+	"payload": {
+		"folderPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services",
+		"name": "employee",
+		"suffix": "Service"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  CREATE_SERVICE"
+}
+[info] [CLI] Called Command angular-service/create: {
+	"message": "[CLI] Called Command angular-service/create",
+	"level": "info"
+}
+[info] [API] Response ok: angular-service/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-service/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 200
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "amCAAr4luI",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 200
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for rxjs/methods/flow: {
+	"action": "rxjs/methods/flow",
+	"params": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "amCAAr4luI",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for rxjs/methods/flow"
+}
+[info] [CLI] Calling Query rxjs/methods/flow: {
+	"funcParams": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query rxjs/methods/flow"
+}
+[info] [CLI] Called Query rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query rxjs/methods/flow"
+}
+[info] [API] Response ok: rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: rxjs/methods/flow"
+}
+[info] [API] Request for method-signature/create: {
+	"action": "method-signature/create",
+	"params": {
+		"name": "getAll",
+		"params": {},
+		"returnType": "Observable<EmployeeModel[]>"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "amCAAr4luI",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for method-signature/create"
+}
+[info] [CLI] Calling Command method-signature/create: {
+	"funcParams": {
+		"name": "getAll",
+		"params": {},
+		"returnType": "Observable<EmployeeModel[]>"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command method-signature/create"
+}
+[info] [CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "getAll",
+		"params": {},
+		"returnType": "Observable<EmployeeModel[]>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "getAll",
+		"params": {},
+		"returnType": "Observable<EmployeeModel[]>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Called Command method-signature/create: {
+	"message": "[CLI] Called Command method-signature/create",
+	"level": "info"
+}
+[info] [API] Response ok: method-signature/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: method-signature/create"
+}
+[info] [API] Request for flow/create-entity: {
+	"action": "flow/create-entity",
+	"params": {},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "nVnC7B3pEL",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for flow/create-entity"
+}
+[info] [CLI] Calling Query flow/create-entity: {
+	"funcParams": {},
+	"level": "info",
+	"message": "[CLI] Calling Query flow/create-entity"
+}
+[info] [CLI] Called Query flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app",
+				"absoluteRootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"rootRoutingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query flow/create-entity"
+}
+[info] [API] Response ok: flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app",
+				"absoluteRootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+				"rootRoutingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: flow/create-entity"
+}
+[info] [API] Request for angular-component/create: {
+	"action": "angular-component/create",
+	"params": {
+		"name": "employee",
+		"entityId": "component"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "nVnC7B3pEL",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/create"
+}
+[info] [CLI] Calling Command angular-component/create: {
+	"funcParams": {
+		"name": "employee",
+		"entityId": "component"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/create"
+}
+[info] [CommandBus]: Dispatching command COMPONENT_CREATE_SMART_COMPONENT: {
+	"commandName": "COMPONENT_CREATE_SMART_COMPONENT",
+	"payload": {
+		"name": "employee",
+		"prefix": "app",
+		"suffix": "Component",
+		"absoluteFolderPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee",
+		"config": {
+			"stylesExtension": "none",
+			"viewEncapsulation": "Emulated",
+			"selector": "generated",
+			"changeDetectionStrategy": "OnPush"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command COMPONENT_CREATE_SMART_COMPONENT"
+}
+[warn] [TsMorphFileAdapter]: File Not Found, creating...: {
+	"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+	"level": "warn",
+	"message": "[TsMorphFileAdapter]: File Not Found, creating..."
+}
+[info] [EventBus]: Broadcasting event COMPONENT_SMART_COMPONENT_CREATED: {
+	"type": "COMPONENT_SMART_COMPONENT_CREATED",
+	"payload": {
+		"createdFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event COMPONENT_SMART_COMPONENT_CREATED"
+}
+[info] [CommandBus]: Dispatching command CREATE_COMPONENT_MODULE: {
+	"commandName": "CREATE_COMPONENT_MODULE",
+	"payload": {
+		"moduleFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command CREATE_COMPONENT_MODULE"
+}
+[info] [EventBus]: Broadcasted COMPONENT_SMART_COMPONENT_CREATED: {
+	"event": {
+		"createdFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted COMPONENT_SMART_COMPONENT_CREATED"
+}
+[info] [EventBus]: Broadcasting event MODULE_MODULE_CREATED: {
+	"type": "MODULE_MODULE_CREATED",
+	"payload": {
+		"moduleFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event MODULE_MODULE_CREATED"
+}
+[info] [EventBus]: Broadcasted MODULE_MODULE_CREATED: {
+	"event": {
+		"moduleFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted MODULE_MODULE_CREATED"
+}
+[info] [CommandBus]: Handled  CREATE_COMPONENT_MODULE: {
+	"commandName": "CREATE_COMPONENT_MODULE",
+	"payload": {
+		"moduleFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  CREATE_COMPONENT_MODULE"
+}
+[info] [CommandBus]: Handled  COMPONENT_CREATE_SMART_COMPONENT: {
+	"commandName": "COMPONENT_CREATE_SMART_COMPONENT",
+	"payload": {
+		"name": "employee",
+		"prefix": "app",
+		"suffix": "Component",
+		"absoluteFolderPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee",
+		"config": {
+			"stylesExtension": "none",
+			"viewEncapsulation": "Emulated",
+			"selector": "generated",
+			"changeDetectionStrategy": "OnPush"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  COMPONENT_CREATE_SMART_COMPONENT"
+}
+[info] [CLI] Called Command angular-component/create: {
+	"message": "[CLI] Called Command angular-component/create",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 309
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "IWjJsjcCYP",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 309
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for injectable/list: {
+	"action": "injectable/list",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "IWjJsjcCYP",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/list"
+}
+[info] [CLI] Calling Query injectable/list: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query injectable/list"
+}
+[info] [CLI] Called Query injectable/list: {
+	"result": [
+		{
+			"file": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"name": "EmployeeService",
+			"type": "ANGULAR_SERVICE",
+			"dataType": "Internal"
+		},
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query injectable/list"
+}
+[info] [API] Response ok: injectable/list: {
+	"result": [
+		{
+			"file": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"name": "EmployeeService",
+			"type": "ANGULAR_SERVICE",
+			"dataType": "Internal"
+		},
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: injectable/list"
+}
+[info] [API] Request for injectable/inject: {
+	"action": "injectable/inject",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"injectingPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "IWjJsjcCYP",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/inject"
+}
+[info] [CommandBus]: Dispatching command INJECT_SERVICE_DEPENDENCY: {
+	"commandName": "INJECT_SERVICE_DEPENDENCY",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"injectingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command INJECT_SERVICE_DEPENDENCY"
+}
+[info] [CLI] Calling Command injectable/inject: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"injectingPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command injectable/inject"
+}
+[info] [CommandBus]: Handled  INJECT_SERVICE_DEPENDENCY: {
+	"commandName": "INJECT_SERVICE_DEPENDENCY",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"injectingFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  INJECT_SERVICE_DEPENDENCY"
+}
+[info] [CLI] Called Command injectable/inject: {
+	"message": "[CLI] Called Command injectable/inject",
+	"level": "info"
+}
+[info] [API] Response ok: injectable/inject: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: injectable/inject"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 309
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "3jvBl7xjft",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 309
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for injectable/list: {
+	"action": "injectable/list",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "3jvBl7xjft",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/list"
+}
+[info] [CLI] Calling Query injectable/list: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query injectable/list"
+}
+[info] [CLI] Called Query injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query injectable/list"
+}
+[info] [API] Response ok: injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: injectable/list"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 441
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "QtN08k2eSO",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 441
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for entity/return-types: {
+	"action": "entity/return-types",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "QtN08k2eSO",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/return-types"
+}
+[info] [CLI] Calling Query entity/return-types: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/return-types"
+}
+[info] [CLI] Called Query entity/return-types: {
+	"result": [
+		{
+			"name": "string"
+		},
+		{
+			"name": "string[]"
+		},
+		{
+			"name": "number"
+		},
+		{
+			"name": "number[]"
+		},
+		{
+			"name": "boolean"
+		},
+		{
+			"name": "boolean[]"
+		},
+		{
+			"name": "void"
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query entity/return-types"
+}
+[info] [API] Response ok: entity/return-types: {
+	"result": [
+		{
+			"name": "string"
+		},
+		{
+			"name": "string[]"
+		},
+		{
+			"name": "number"
+		},
+		{
+			"name": "number[]"
+		},
+		{
+			"name": "boolean"
+		},
+		{
+			"name": "boolean[]"
+		},
+		{
+			"name": "void"
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: entity/return-types"
+}
+[info] [API] Request for method-signature/create: {
+	"action": "method-signature/create",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"name": "getAll",
+		"params": {},
+		"returnType": "void"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "QtN08k2eSO",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for method-signature/create"
+}
+[info] [CLI] Calling Command method-signature/create: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"name": "getAll",
+		"params": {},
+		"returnType": "void"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command method-signature/create"
+}
+[info] [CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"name": "getAll",
+		"params": {},
+		"returnType": "void"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"name": "getAll",
+		"params": {},
+		"returnType": "void"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Called Command method-signature/create: {
+	"message": "[CLI] Called Command method-signature/create",
+	"level": "info"
+}
+[info] [API] Response ok: method-signature/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: method-signature/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "nFQwRfMztm",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "layouts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "nFQwRfMztm",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "section",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "layouts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "section",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/add-layout: {
+	"action": "angular-component/templates/add-layout",
+	"params": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0,
+		"layoutTemplate": "section"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "nFQwRfMztm",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/add-layout"
+}
+[info] [CLI] Calling Command angular-component/templates/add-layout: {
+	"funcParams": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0,
+		"layoutTemplate": "section"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"position": 0,
+		"layoutTemplate": "section"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddLayoutToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddLayoutToTemplateCommand: {
+	"commandName": "AddLayoutToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"position": 0,
+		"layoutTemplate": "section"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddLayoutToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-layout: {
+	"message": "[CLI] Called Command angular-component/templates/add-layout",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/templates/add-layout: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/add-layout"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "XgGhyIowD9",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for angular-component/properties/list: {
+	"action": "angular-component/properties/list",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "XgGhyIowD9",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/properties/list"
+}
+[info] [API] Response ok: angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employee$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"employee_name",
+				"employee_salary",
+				"employee_age",
+				"profile_image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/properties/list"
+}
+[info] [CLI] Calling Query angular-component/properties/list: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/properties/list"
+}
+[info] [CLI] Called Query angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employee$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"employee_name",
+				"employee_salary",
+				"employee_age",
+				"profile_image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/properties/list"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "lists"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "XgGhyIowD9",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "ul",
+			"contextVariables": []
+		},
+		{
+			"label": "table",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "lists"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "ul",
+			"contextVariables": []
+		},
+		{
+			"label": "table",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "details"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "XgGhyIowD9",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "content",
+			"contextVariables": []
+		},
+		{
+			"label": "text",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "details"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "content",
+			"contextVariables": []
+		},
+		{
+			"label": "text",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/add-list: {
+	"action": "angular-component/templates/add-list",
+	"params": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0,
+		"propertyName": "employee$",
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "XgGhyIowD9",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/add-list"
+}
+[info] [CLI] Calling Command angular-component/templates/add-list: {
+	"funcParams": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 0,
+		"propertyName": "employee$",
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-list"
+}
+[info] [CommandBus]: Dispatching command AddListToTemplateCommand: {
+	"commandName": "AddListToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employee$",
+		"position": 0,
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddListToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  AddListToTemplateCommand: {
+	"commandName": "AddListToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employee$",
+		"position": 0,
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddListToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-list: {
+	"message": "[CLI] Called Command angular-component/templates/add-list",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/templates/add-list: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/add-list"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 24
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "h1FRRIrFh4",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 24
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for angular-component/properties/list: {
+	"action": "angular-component/properties/list",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "h1FRRIrFh4",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/properties/list"
+}
+[info] [API] Response ok: angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employee$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"employee_name",
+				"employee_salary",
+				"employee_age",
+				"profile_image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/properties/list"
+}
+[info] [CLI] Calling Query angular-component/properties/list: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/properties/list"
+}
+[info] [CLI] Called Query angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employee$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"employee_name",
+				"employee_salary",
+				"employee_age",
+				"profile_image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/properties/list"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "lists"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "h1FRRIrFh4",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "ul",
+			"contextVariables": []
+		},
+		{
+			"label": "table",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "lists"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "ul",
+			"contextVariables": []
+		},
+		{
+			"label": "table",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "details"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "h1FRRIrFh4",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "content",
+			"contextVariables": []
+		},
+		{
+			"label": "text",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "details"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "content",
+			"contextVariables": []
+		},
+		{
+			"label": "text",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/add-list: {
+	"action": "angular-component/templates/add-list",
+	"params": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 24,
+		"propertyName": "employee$",
+		"listTemplate": "ul",
+		"detailTemplate": "content"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "h1FRRIrFh4",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/add-list"
+}
+[info] [CLI] Calling Command angular-component/templates/add-list: {
+	"funcParams": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 24,
+		"propertyName": "employee$",
+		"listTemplate": "ul",
+		"detailTemplate": "content"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-list"
+}
+[info] [CommandBus]: Dispatching command AddListToTemplateCommand: {
+	"commandName": "AddListToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employee$",
+		"position": 24,
+		"listTemplate": "ul",
+		"detailTemplate": "content"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddListToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CLI] Called Command angular-component/templates/add-list: {
+	"message": "[CLI] Called Command angular-component/templates/add-list",
+	"level": "info"
+}
+[info] [CommandBus]: Handled  AddListToTemplateCommand: {
+	"commandName": "AddListToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employee$",
+		"position": 24,
+		"listTemplate": "ul",
+		"detailTemplate": "content"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddListToTemplateCommand"
+}
+[info] [API] Response ok: angular-component/templates/add-list: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/add-list"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 143
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "r6PLSYO-uV",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 143
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for angular-component/properties/list: {
+	"action": "angular-component/properties/list",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "r6PLSYO-uV",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/properties/list"
+}
+[info] [API] Response ok: angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employee$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"name",
+				"email",
+				"image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/properties/list"
+}
+[info] [CLI] Calling Query angular-component/properties/list: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/properties/list"
+}
+[info] [CLI] Called Query angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employee$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"name",
+				"email",
+				"image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/properties/list"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "lists"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "r6PLSYO-uV",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "ul",
+			"contextVariables": []
+		},
+		{
+			"label": "table",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "lists"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "ul",
+			"contextVariables": []
+		},
+		{
+			"label": "table",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "details"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "r6PLSYO-uV",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "content",
+			"contextVariables": []
+		},
+		{
+			"label": "text",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "details"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "content",
+			"contextVariables": []
+		},
+		{
+			"label": "text",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/add-list: {
+	"action": "angular-component/templates/add-list",
+	"params": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 143,
+		"propertyName": "employee$",
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "r6PLSYO-uV",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/add-list"
+}
+[info] [CLI] Calling Command angular-component/templates/add-list: {
+	"funcParams": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 143,
+		"propertyName": "employee$",
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-list"
+}
+[info] [CommandBus]: Dispatching command AddListToTemplateCommand: {
+	"commandName": "AddListToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employee$",
+		"position": 143,
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddListToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddListToTemplateCommand: {
+	"commandName": "AddListToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employee$",
+		"position": 143,
+		"listTemplate": "table",
+		"detailTemplate": "text"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddListToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-list: {
+	"message": "[CLI] Called Command angular-component/templates/add-list",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/templates/add-list: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/add-list"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 416
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "5nLeHjT-lk",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 416
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for rxjs/methods/flow: {
+	"action": "rxjs/methods/flow",
+	"params": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "5nLeHjT-lk",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for rxjs/methods/flow"
+}
+[info] [CLI] Calling Query rxjs/methods/flow: {
+	"funcParams": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query rxjs/methods/flow"
+}
+[info] [CLI] Called Query rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query rxjs/methods/flow"
+}
+[info] [API] Response ok: rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: rxjs/methods/flow"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 416
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "83AmG6rLF3",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 416
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for rxjs/methods/flow: {
+	"action": "rxjs/methods/flow",
+	"params": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "83AmG6rLF3",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for rxjs/methods/flow"
+}
+[info] [CLI] Calling Query rxjs/methods/flow: {
+	"funcParams": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query rxjs/methods/flow"
+}
+[info] [CLI] Called Query rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query rxjs/methods/flow"
+}
+[info] [API] Response ok: rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: rxjs/methods/flow"
+}
+[info] [API] Request for method-signature/create: {
+	"action": "method-signature/create",
+	"params": {
+		"name": "delete",
+		"params": {
+			"id": "string"
+		},
+		"returnType": "Observable<string>"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "83AmG6rLF3",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for method-signature/create"
+}
+[info] [CLI] Calling Command method-signature/create: {
+	"funcParams": {
+		"name": "delete",
+		"params": {
+			"id": "string"
+		},
+		"returnType": "Observable<string>"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command method-signature/create"
+}
+[info] [CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "delete",
+		"params": {
+			"id": "string"
+		},
+		"returnType": "Observable<string>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "delete",
+		"params": {
+			"id": "string"
+		},
+		"returnType": "Observable<string>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Called Command method-signature/create: {
+	"message": "[CLI] Called Command method-signature/create",
+	"level": "info"
+}
+[info] [API] Response ok: method-signature/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: method-signature/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 533
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "Fr14wEizqD",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"label": "delete()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"delete"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 533
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"label": "delete()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"delete"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for rxjs/methods/flow: {
+	"action": "rxjs/methods/flow",
+	"params": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "Fr14wEizqD",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for rxjs/methods/flow"
+}
+[info] [CLI] Calling Query rxjs/methods/flow: {
+	"funcParams": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query rxjs/methods/flow"
+}
+[info] [CLI] Called Query rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query rxjs/methods/flow"
+}
+[info] [API] Response ok: rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: rxjs/methods/flow"
+}
+[info] [API] Request for method-signature/create: {
+	"action": "method-signature/create",
+	"params": {
+		"name": "create",
+		"params": {},
+		"returnType": "Observable<EmployeeModel>"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "Fr14wEizqD",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for method-signature/create"
+}
+[info] [CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "create",
+		"params": {},
+		"returnType": "Observable<EmployeeModel>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Calling Command method-signature/create: {
+	"funcParams": {
+		"name": "create",
+		"params": {},
+		"returnType": "Observable<EmployeeModel>"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command method-signature/create"
+}
+[info] [CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "create",
+		"params": {},
+		"returnType": "Observable<EmployeeModel>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Called Command method-signature/create: {
+	"message": "[CLI] Called Command method-signature/create",
+	"level": "info"
+}
+[info] [API] Response ok: method-signature/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: method-signature/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 887
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "CC9gVoTEQt",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "delete()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"delete"
+								]
+							}
+						]
+					},
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 887
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "delete()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"delete"
+								]
+							}
+						]
+					},
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for rxjs/methods/flow: {
+	"action": "rxjs/methods/flow",
+	"params": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "CC9gVoTEQt",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for rxjs/methods/flow"
+}
+[info] [CLI] Calling Query rxjs/methods/flow: {
+	"funcParams": {
+		"actionId": "RXJS_METHOD_CREATE",
+		"label": "Create New Method",
+		"callPath": []
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query rxjs/methods/flow"
+}
+[info] [CLI] Called Query rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query rxjs/methods/flow"
+}
+[info] [API] Response ok: rxjs/methods/flow: {
+	"result": {
+		"context": {},
+		"steps": [
+			{
+				"contextId": "name",
+				"title": "What is the method name?",
+				"subtitle": "e.g getAll",
+				"type": "text-input"
+			},
+			{
+				"contextId": "params",
+				"title": "What are the method parameters?",
+				"subtitle": "Optional: Can be empty... or csv format",
+				"type": "multi-input"
+			},
+			{
+				"contextId": "returnType",
+				"title": "Which return type to use?",
+				"type": "multi-option",
+				"options": [
+					{
+						"name": "Observable<EmployeeModel>"
+					},
+					{
+						"name": "Observable<EmployeeModel[]>"
+					},
+					{
+						"name": "Observable<ApiResponse>"
+					},
+					{
+						"name": "Observable<ApiResponse[]>"
+					},
+					{
+						"name": "Observable<string>"
+					},
+					{
+						"name": "Observable<string[]>"
+					},
+					{
+						"name": "Observable<number>"
+					},
+					{
+						"name": "Observable<number[]>"
+					},
+					{
+						"name": "Observable<boolean>"
+					},
+					{
+						"name": "Observable<boolean[]>"
+					},
+					{
+						"name": "Observable<void>"
+					},
+					{
+						"name": "Observable<void[]>"
+					}
+				],
+				"extraOptions": [],
+				"property": "name"
+			}
+		],
+		"request": {
+			"config": {
+				"url": "method-signature/create",
+				"payload": {
+					"name": "name.value",
+					"params": "params",
+					"returnType": "returnType.name"
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: rxjs/methods/flow"
+}
+[info] [API] Request for method-signature/create: {
+	"action": "method-signature/create",
+	"params": {
+		"name": "createEmployee",
+		"params": {},
+		"returnType": "Observable<void>"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "CC9gVoTEQt",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for method-signature/create"
+}
+[info] [CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "createEmployee",
+		"params": {},
+		"returnType": "Observable<void>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Calling Command method-signature/create: {
+	"funcParams": {
+		"name": "createEmployee",
+		"params": {},
+		"returnType": "Observable<void>"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command method-signature/create"
+}
+[info] [CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE: {
+	"commandName": "ADD_READ_METHOD_SIGNATURE",
+	"payload": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"name": "createEmployee",
+		"params": {},
+		"returnType": "Observable<void>"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ADD_READ_METHOD_SIGNATURE"
+}
+[info] [CLI] Called Command method-signature/create: {
+	"message": "[CLI] Called Command method-signature/create",
+	"level": "info"
+}
+[info] [API] Response ok: method-signature/create: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: method-signature/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 943
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "PrqFIPLsuJ",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/services/employee.service.ts",
+		"position": 943
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeService"
+		},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "create()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"create"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"create"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"create"
+								]
+							}
+						]
+					},
+					{
+						"label": "delete()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"delete"
+								]
+							}
+						]
+					},
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeService"
+		},
+		"children": [
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "create()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"create"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"create"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"create"
+								]
+							}
+						]
+					},
+					{
+						"label": "delete()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"delete"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"delete"
+								]
+							}
+						]
+					},
+					{
+						"label": "getAll()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"getAll"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"getAll"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "RXJS_METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 590
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "PNiaz7tyI3",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"position": 590
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"label": "employees$",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Property",
+								"callPath": [
+									"employees$"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Property Side Effect",
+								"callPath": [
+									"employees$"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "remove()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"remove"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"remove"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"remove"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"label": "employees$",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Property",
+								"callPath": [
+									"employees$"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Property Side Effect",
+								"callPath": [
+									"employees$"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"label": "remove()",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Statement",
+								"callPath": [
+									"remove"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP_TO",
+								"label": "Map To",
+								"callPath": [
+									"remove"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Statement Side Effect",
+								"callPath": [
+									"remove"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for angular-component/form-properties/add: {
+	"action": "angular-component/form-properties/add",
+	"params": {
+		"propertyName": "employeeAddForm",
+		"componentFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"fields": {
+			"name": "text",
+			"age": "text",
+			"salary": "text"
+		}
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "PNiaz7tyI3",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/form-properties/add"
+}
+[info] [CLI] Calling Command angular-component/form-properties/add: {
+	"funcParams": {
+		"propertyName": "employeeAddForm",
+		"componentFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"fields": {
+			"name": "text",
+			"age": "text",
+			"salary": "text"
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/form-properties/add"
+}
+[info] [CommandBus]: Dispatching command SMART_COMPONENT_ADD_FORM_PROPERTY: {
+	"commandName": "SMART_COMPONENT_ADD_FORM_PROPERTY",
+	"payload": {
+		"componentTsFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"propertyName": "employeeAddForm",
+		"fields": {
+			"name": "text",
+			"age": "text",
+			"salary": "text"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command SMART_COMPONENT_ADD_FORM_PROPERTY"
+}
+[info] [EventBus]: Broadcasting event SMART_COMPONENT_FORM_ADDED: {
+	"type": "SMART_COMPONENT_FORM_ADDED",
+	"payload": {
+		"componentFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentName": "EmployeeComponent"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event SMART_COMPONENT_FORM_ADDED"
+}
+[info] [EventBus]: Broadcasted SMART_COMPONENT_FORM_ADDED: {
+	"event": {
+		"componentFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentName": "EmployeeComponent"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted SMART_COMPONENT_FORM_ADDED"
+}
+[info] [CommandBus]: Dispatching command MODULE_IMPORT_REACTIVE_FORM: {
+	"commandName": "MODULE_IMPORT_REACTIVE_FORM",
+	"payload": {
+		"componentFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"moduleName": "ReactiveFormsModule",
+		"declarationModules": [
+			{
+				"name": "EmployeeComponentModule",
+				"path": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command MODULE_IMPORT_REACTIVE_FORM"
+}
+[info] [CommandBus]: Handled  MODULE_IMPORT_REACTIVE_FORM: {
+	"commandName": "MODULE_IMPORT_REACTIVE_FORM",
+	"payload": {
+		"componentFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"moduleName": "ReactiveFormsModule",
+		"declarationModules": [
+			{
+				"name": "EmployeeComponentModule",
+				"path": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  MODULE_IMPORT_REACTIVE_FORM"
+}
+[info] [CommandBus]: Handled  SMART_COMPONENT_ADD_FORM_PROPERTY: {
+	"commandName": "SMART_COMPONENT_ADD_FORM_PROPERTY",
+	"payload": {
+		"componentTsFile": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"propertyName": "employeeAddForm",
+		"fields": {
+			"name": "text",
+			"age": "text",
+			"salary": "text"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  SMART_COMPONENT_ADD_FORM_PROPERTY"
+}
+[info] [CLI] Called Command angular-component/form-properties/add: {
+	"message": "[CLI] Called Command angular-component/form-properties/add",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/form-properties/add: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/form-properties/add"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 775
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "vbZ70wdPPs",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 775
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeeComponent",
+			"options": [
+				{
+					"type": "forms"
+				},
+				{
+					"type": "lists"
+				}
+			]
+		},
+		"children": [
+			{
+				"actionId": "ADD_TEMPLATE",
+				"label": "Display Data",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_LAYOUT",
+				"label": "Display Layout",
+				"callPath": []
+			},
+			{
+				"actionId": "ADD_COMPONENT",
+				"label": "Display Component",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for angular-component/properties/list: {
+	"action": "angular-component/properties/list",
+	"params": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "vbZ70wdPPs",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/properties/list"
+}
+[info] [API] Response ok: angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employeeAddForm",
+			"templateType": "forms",
+			"typeProperties": []
+		},
+		{
+			"label": "employees$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"employee_name",
+				"employee_salary",
+				"employee_age",
+				"profile_image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/properties/list"
+}
+[info] [CLI] Calling Query angular-component/properties/list: {
+	"funcParams": {
+		"entityFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/properties/list"
+}
+[info] [CLI] Called Query angular-component/properties/list: {
+	"result": [
+		{
+			"label": "employeeAddForm",
+			"templateType": "forms",
+			"typeProperties": []
+		},
+		{
+			"label": "employees$",
+			"templateType": "lists",
+			"typeProperties": [
+				"id",
+				"employee_name",
+				"employee_salary",
+				"employee_age",
+				"profile_image"
+			]
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/properties/list"
+}
+[info] [API] Request for angular-component/templates/get: {
+	"action": "angular-component/templates/get",
+	"params": {
+		"name": "forms"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "vbZ70wdPPs",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/get"
+}
+[info] [API] Response ok: angular-component/templates/get: {
+	"result": [
+		{
+			"label": "form",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/get"
+}
+[info] [CLI] Calling Query angular-component/templates/get: {
+	"funcParams": {
+		"name": "forms"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query angular-component/templates/get"
+}
+[info] [CLI] Called Query angular-component/templates/get: {
+	"result": [
+		{
+			"label": "form",
+			"contextVariables": []
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query angular-component/templates/get"
+}
+[info] [API] Request for angular-component/templates/add-form: {
+	"action": "angular-component/templates/add-form",
+	"params": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 775,
+		"propertyName": "employeeAddForm",
+		"formTemplate": "form"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "G1GaWiLZRV",
+			"correlationId": "vbZ70wdPPs",
+			"clickedPath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/templates/add-form"
+}
+[info] [CLI] Calling Command angular-component/templates/add-form: {
+	"funcParams": {
+		"componentHtmlFilePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"position": 775,
+		"propertyName": "employeeAddForm",
+		"formTemplate": "form"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/templates/add-form"
+}
+[info] [CommandBus]: Dispatching command AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employeeAddForm",
+		"position": 775,
+		"formTemplate": "form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command AddFormToTemplateCommand"
+}
+[info] [EventBus]: Broadcasting event TemplateAddedEvent: {
+	"type": "TemplateAddedEvent",
+	"payload": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event TemplateAddedEvent"
+}
+[info] [EventBus]: Broadcasted TemplateAddedEvent: {
+	"event": {
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"tokens": {}
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted TemplateAddedEvent"
+}
+[info] [CommandBus]: Handled  AddFormToTemplateCommand: {
+	"commandName": "AddFormToTemplateCommand",
+	"payload": {
+		"workspaceRoot": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry",
+		"componentTs": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.ts",
+		"componentHtml": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html",
+		"className": "EmployeeComponent",
+		"propertyName": "employeeAddForm",
+		"position": 775,
+		"formTemplate": "form"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  AddFormToTemplateCommand"
+}
+[info] [CLI] Called Command angular-component/templates/add-form: {
+	"message": "[CLI] Called Command angular-component/templates/add-form",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/templates/add-form: {
+	"result": {
+		"filePath": "C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component.html"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/templates/add-form"
+}
+[info] [CommandBus]: Dispatching command ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command ImportTemplateModulesCommand"
+}
+[info] [CommandBus]: Handled  ImportTemplateModulesCommand: {
+	"commandName": "ImportTemplateModulesCommand",
+	"payload": {
+		"componentModuleFilePaths": [
+			"C:/Users/lukas/WebstormProjects/untitled/lowgular-course-entry/src/app/ui/employee/employee.component-module.ts"
+		],
+		"addedTokens": {}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  ImportTemplateModulesCommand"
+}
